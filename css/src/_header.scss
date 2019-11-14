@@ -1,0 +1,167 @@
+
+
+header {
+	text-align: center;
+	position: relative;
+
+	.logo {
+		padding: 10px 20px;
+
+		@include respond-to( 600px ) {
+			float: left;
+			padding: 20px;
+			max-width: 30%;
+		}
+	}
+
+	.container-main-menu {
+		background: linear-gradient( 90deg, $grey-light, white, $grey-light);;
+		position: relative;
+		@include clearfix;
+		padding: 0 0 10px;
+		border-top: 1px solid $grey;
+
+		@include respond-to( 840px ) {
+			padding: 0;
+		}
+		
+		.button {
+			@include respond-to( 840px ) {
+				float: right;
+				margin: 7px 20px 0 0;
+			}
+		}
+
+		ul.nav-menu {
+			padding: 10px 0;
+
+			@include respond-to( 840px ) {
+				float: left;
+				height: 60px;
+				padding: 0;
+			}
+			
+			li {
+				@include respond-to( 840px ) {				
+					display: inline-block;
+					position: relative;
+					float: left;
+				}
+
+				a {
+					@include font-bold;
+					display: block;
+					padding: 10px 5px 8px;
+					font-size: 15px;
+					line-height: 17px;
+					color: $purple;
+					text-align: center;
+					text-decoration: none;
+					text-transform: uppercase;
+					width: 100%;
+					transition: 300ms background-color ease-in-out;
+
+					@include respond-to( 840px ) {
+						display: inline-block;
+						width: auto;
+						padding: 21px 10px;
+					}
+
+					@include respond-to( 1024px ) {
+						padding: 20px 15px;
+					}
+
+					@include respond-to( 1220px ) {
+						font-size: 17px;
+						padding: 22px 20px;
+					}
+				}
+
+				&:hover, &:focus, &.open {
+					a {
+						background-color: $grey-light;
+					}
+
+					ul.sub-menu {
+						display: block;
+					}
+				}
+
+				ul.sub-menu {
+					display: none;
+					margin-bottom: 3px;
+
+					@include respond-to( 600px ) {
+						position: absolute;
+						right: 0;
+						top: 60px;
+						width: 200px;
+						z-index: 2000;
+						background: lighten( $forest, 5% );
+						@include clearfix;
+					}
+
+					li {
+						display: block;
+						width: 100%;
+
+						a {
+							padding: 7px 10px;
+							font-size: 15px;
+							line-height: 18px;
+							display: block;
+
+							@include respond-to( 840px ) {
+								padding: 10px;
+
+								&:hover {
+									background: lighten( $forest, 10% );
+								}
+							}
+
+							@include respond-to( 1220px ) {
+								padding: 15px 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.skip-content {
+		color: white;
+
+		@include respond-to( 768px ) {
+			position: absolute;
+			right: 30px;
+			top: 100px;
+		}
+	}
+
+	.header-search {
+		display: none;
+
+		@include respond-to( 840px ) {
+			display: block;
+			position: absolute;
+			right: 20px;
+			top: 10px;
+			width: 30%;
+			max-width: 250px;
+			text-align: left;
+			border: 2px solid $lime;
+			border-radius: 15px;
+			padding: 10px;
+			
+			input[type=text] {
+				margin: 5px 0;
+				font-size: .9em;
+				border: 2px solid $lime;
+				width: 100%;
+			}
+		}
+	}
+}
+

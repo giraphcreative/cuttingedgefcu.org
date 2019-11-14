@@ -1,0 +1,23 @@
+
+
+.blog {
+	padding: 20px;
+	text-align: center;
+
+	.blog-title {
+		margin: 10px 0;
+		width: 90%;
+		max-width: 500px;
+	}
+
+	.entry {
+		@include respond-to( 768px ) {
+			width: 30%;
+			margin: 0 2% 0 1%;
+
+			&:first-child {
+				margin-left: 0%;
+			}
+		}
+	}
+}

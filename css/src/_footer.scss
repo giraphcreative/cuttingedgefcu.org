@@ -1,0 +1,84 @@
+
+
+footer {
+	background: $forest url(../img/bg-footer.png) center center;
+	color: white;
+	padding: 20px 0;
+	@include clearfix;
+
+	@include respond-to( 1024px ) {
+		padding: 30px;
+	}
+
+	@include respond-to( 1220px ) {
+		padding: 30px 40px;
+	}
+
+	.first span {
+		font-size: 1.2em; 
+	}
+
+	.column {
+		padding: 20px;
+
+		@include respond-to( 600px ) {
+			float: left;
+			width: 50%;
+			margin: 0;
+			padding: 0 20px;
+		}
+
+		@include respond-to( 1024px ) {
+			width: 20%;
+			border-right: 2px solid white;
+			min-height: 110px;
+
+			&.first {
+				width: 40%;
+				border-right: 0;
+			}
+
+			&.last {
+				border-right: 0;
+			}
+		}
+
+		ul {
+			li {
+				a {
+					display: block;
+					color: white;
+				}
+			}
+		}
+	}
+
+	p {
+		padding: 0;
+	}
+}
+
+
+.colophon {
+	@include clearfix;
+	
+	.third {
+		@include font;
+		font-size: .7em;
+
+		&.links {
+			font-size: 1em;
+		}
+
+		&:first-child {
+			img {
+				max-width: 40%;
+			}
+		}
+	}
+
+	img {
+		max-width: 30%;
+	}
+}
+
