@@ -2,21 +2,17 @@
 
 // set colors
 $lime: #A8AD00;
-$forest: #365F3C;
-$purple: #522E91;
+$purple: #410099;
 $blue: #0071CE;
+$navy: #164476;
+$orange: #F47735;
 $grey: #9C9FA0;
 $grey-dark: darken( $grey, 30% );
 $grey-light: #E6E7E8;
 
 
-// link color
-$link-color: $forest;
-
-
 // background classes for divs
 .bg-lime { background-color: $lime; color: white; }
-.bg-forest { background-color: $forest; color: white; }
 .bg-grey-light { background-color: $grey-light; color: white; }
 .bg-grey { background-color: $grey; color: white; }
 .bg-grey-dark { background-color: $grey-dark; color: white; }
@@ -26,7 +22,6 @@ $link-color: $forest;
 
 // text color classes <p> or <span>
 .text-lime { color: $lime; }
-.text-forest { color: $forest; }
 .text-grey-light { color: $grey-light; }
 .text-grey { color: $grey; }
 .text-grey-dark { color: darken( $grey, 30% ); }

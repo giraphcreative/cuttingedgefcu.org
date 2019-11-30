@@ -1,8 +1,8 @@
 
 
 .blog {
-	padding: 20px;
 	text-align: center;
+	@include clearfix;
 
 	.blog-title {
 		margin: 10px 0;
@@ -10,13 +10,32 @@
 		max-width: 500px;
 	}
 
-	.entry {
-		@include respond-to( 768px ) {
-			width: 30%;
-			margin: 0 2% 0 1%;
+	.blog-listing {
+		.entry {
+			@include respond-to( 768px ) {
+				float: left;
+				width: 30%;
+				margin: 0 2% 0 1%;
 
-			&:first-child {
-				margin-left: 0%;
+				&:first-child {
+					margin-left: 0%;
+				}
+			}
+
+			h3 {
+				font-size: 1.4em;
+
+				a {
+					text-transform: uppercase;
+					text-decoration: none;
+					color: $navy;
+				}
+			}
+
+			img {
+				border: 10px solid white;
+				box-shadow: 0 0 20px rgba( black, .2 ); 
+				margin-bottom: 20px;
 			}
 		}
 	}

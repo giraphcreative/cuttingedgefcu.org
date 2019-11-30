@@ -6,7 +6,7 @@
 get_header(); ?>
 
 
-	<div class="site-content content-wide" role="main">
+	<div class="main-content pad" role="main">
 
 		<h1>Not Found</h1>
 		<p>We couldn't find a page at the URL you requested. Navigate using the menu, or search using the form below.</p>

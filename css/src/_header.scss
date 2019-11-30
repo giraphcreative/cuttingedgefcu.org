@@ -9,8 +9,12 @@ header {
 
 		@include respond-to( 600px ) {
 			float: left;
-			padding: 20px;
+			padding: 20px 35px;
 			max-width: 30%;
+		}
+
+		@include respond-to( 1024px ) {
+			padding: 20px 45px;
 		}
 	}
 
@@ -21,12 +25,16 @@ header {
 		padding: 0 0 10px;
 		border-top: 1px solid $grey;
 
-		@include respond-to( 840px ) {
-			padding: 0;
+		@include respond-to( 1000px ) {
+			padding: 0 0 0 10px;
+		}
+
+		@include respond-to( 1100px ) {
+			padding: 0 0 0 30px;
 		}
 		
 		.button {
-			@include respond-to( 840px ) {
+			@include respond-to( 1000px ) {
 				float: right;
 				margin: 7px 20px 0 0;
 			}
@@ -35,14 +43,14 @@ header {
 		ul.nav-menu {
 			padding: 10px 0;
 
-			@include respond-to( 840px ) {
+			@include respond-to( 1000px ) {
 				float: left;
 				height: 60px;
 				padding: 0;
 			}
 			
 			li {
-				@include respond-to( 840px ) {				
+				@include respond-to( 1000px ) {				
 					display: inline-block;
 					position: relative;
 					float: left;
@@ -52,7 +60,7 @@ header {
 					@include font-bold;
 					display: block;
 					padding: 10px 5px 8px;
-					font-size: 15px;
+					font-size: 14px;
 					line-height: 17px;
 					color: $purple;
 					text-align: center;
@@ -61,19 +69,15 @@ header {
 					width: 100%;
 					transition: 300ms background-color ease-in-out;
 
-					@include respond-to( 840px ) {
+					@include respond-to( 1000px ) {
 						display: inline-block;
 						width: auto;
-						padding: 21px 10px;
-					}
-
-					@include respond-to( 1024px ) {
 						padding: 20px 15px;
 					}
 
 					@include respond-to( 1220px ) {
 						font-size: 17px;
-						padding: 22px 20px;
+						padding: 21px 20px;
 					}
 				}
 
@@ -93,11 +97,10 @@ header {
 
 					@include respond-to( 600px ) {
 						position: absolute;
-						right: 0;
+						left: 0;
 						top: 60px;
 						width: 200px;
 						z-index: 2000;
-						background: lighten( $forest, 5% );
 						@include clearfix;
 					}
 
@@ -106,21 +109,22 @@ header {
 						width: 100%;
 
 						a {
-							padding: 7px 10px;
-							font-size: 15px;
+							padding: 7px 8px;
+							font-size: 14px;
 							line-height: 18px;
 							display: block;
+							background: rgba( $grey-light, .7 );
 
-							@include respond-to( 840px ) {
+							@include respond-to( 1000px ) {
 								padding: 10px;
 
 								&:hover {
-									background: lighten( $forest, 10% );
+									background: rgba( $grey-light, .9 );
 								}
 							}
 
 							@include respond-to( 1220px ) {
-								padding: 15px 10px;
+								padding: 12px 10px;
 							}
 						}
 					}

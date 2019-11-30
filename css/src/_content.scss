@@ -7,12 +7,6 @@
 	box-shadow: 0 0 50px darken( $grey-light, 20% );
 }
 
-.content {
-	h1, h2, h3, h4, h5, h6 {
-		padding: 6px 0;
-	}
-}
-
 .content-style {
 	ol, ul {
 		padding: 5px 0 5px 35px;
@@ -36,6 +30,10 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		padding: 10px 0 5px;
+	}
+
+	h2 {
+		color: $navy;
 	}
 
 	blockquote {
@@ -104,41 +102,18 @@
 	}
 }
 
-.content-narrow {
-	padding: 40px 20px;
-	max-width: 1024px;
-	margin: 0 auto;
+.content {
 	@extend .content-style;
 }
 
-.content-wide {
-	@include clearfix;
-	@extend .content-style;
-	padding: 40px 20px;
+.main-content {
+	background: url(../img/bg-dashes.png) center center no-repeat;
+	background-size: cover;
 
-	@include respond-to( 1024px ) {
-		padding: 30px 40px 50px;
-	}
-
-	@include respond-to( 1220px ) {
-		padding: 40px 60px 60px;
+	.inner {
+		padding: 10px 0 20px;
 	}
 }
-
-.content-two-column {
-	@include clearfix;
-	position: relative;
-	
-	.three-quarter {
-		@extend .content-style;
-	}
-}
-
-
-.fluid-width-video-wrapper {
-	margin: 15px 0;
-}
-
 
 p.disclosure {
 	font-size: .8em;

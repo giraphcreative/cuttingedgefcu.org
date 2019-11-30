@@ -5,20 +5,26 @@
 require_once( 'cmb2/init.php' );
 
 
+$colors = array(
+    'purple' => 'Purple',
+    'blue' => 'Blue',
+    'navy' => 'Navy',
+    'orange' => 'Orange',
+    'lime' => 'Lime'
+);
+
+
 
 // add metabox(es)
 function page_metaboxes( $meta_boxes ) {
 
+    global $colors;
 
     // showcase metabox
     $showcase_metabox = new_cmb2_box( array(
         'id' => 'showcase_metabox',
         'title' => 'Showcase',
         'object_types' => array( 'page' ), // post type
-        'show_on' => array(
-            'key' => 'template',
-            'value' => array( '', 'page-front' )
-        ),
         'context' => 'normal',
         'priority' => 'high',
     ) );
@@ -58,12 +64,34 @@ function page_metaboxes( $meta_boxes ) {
     
 
 
+    // showcase metabox
+    $title_metabox = new_cmb2_box( array(
+        'id' => 'title_metabox',
+        'title' => 'Large Title',
+        'object_types' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+    ));
+
+    $title_metabox->add_field( array(
+        'name' => 'Title',
+        'id'   => CMB_PREFIX . 'large-title',
+        'type' => 'text',
+    ) );
+
+    $title_metabox->add_field( array(
+        'name' => 'Subtitle',
+        'id'   => CMB_PREFIX . 'large-subtitle',
+        'type' => 'text',
+    ) );
+
+
+
     // thumb showcase metabox
     $icon_showcase_metabox = new_cmb2_box( array(
         'id' => 'icon_showcase_metabox',
         'title' => 'Icon Showcase',
         'object_types' => array( 'page' ),
-        'show_on'      => array( 'key' => 'page-template', 'value' => 'page-front.php' ),
         'context' => 'normal',
         'priority' => 'high',
     ) );
@@ -88,8 +116,8 @@ function page_metaboxes( $meta_boxes ) {
     ) );
 
     $icon_showcase_metabox->add_group_field( $icon_showcase_metabox_group, array(
-        'name' => 'Image Alt Text',
-        'desc' => 'Set alt text for the icon.',
+        'name' => 'Super Title',
+        'desc' => 'The super title shows up above the title text.',
         'id'   => 'alt-text',
         'type' => 'text',
         'sanitization_cb' => false
@@ -110,7 +138,82 @@ function page_metaboxes( $meta_boxes ) {
         'type' => 'text',
     ) );
 
-    
+    $icon_showcase_metabox->add_group_field( $icon_showcase_metabox_group, array(
+        'name' => 'Color',
+        'desc' => 'Select a color for the border of this icon.',
+        'id'   => 'color',
+        'type' => 'select',
+        'default' => 'blue',
+        'options' => $colors
+    ) );
+
+        
+
+    // thumb showcase metabox
+    $accordion_metabox = new_cmb2_box( array(
+        'id' => 'accordion_metabox',
+        'title' => 'Accordion',
+        'object_types' => array( 'page' ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $accordion_metabox_group = $accordion_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'accordion',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Accordion', 'cmb2'),
+            'remove_button' => __('Remove Accordion', 'cmb2'),
+            'group_title'   => __( 'Accordion {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $accordion_metabox->add_group_field( $accordion_metabox_group, array(
+        'name' => 'Initial State',
+        'desc' => 'Choose an initial state for this accordion',
+        'id'   => 'state',
+        'type' => 'select',
+        'default' => 'closed',
+        'options' => array (
+            'open' => 'Open',
+            'closed' => 'Closed'
+        )
+    ) );
+
+    $accordion_metabox->add_group_field( $accordion_metabox_group, array(
+        'name' => 'Title',
+        'desc' => 'Set a title to display below this icon.',
+        'id'   => 'title',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $accordion_metabox->add_group_field( $accordion_metabox_group, array(
+        'name' => 'Icon',
+        'desc' => 'Upload a 100x100 pixel icon image. Ideally a transparent PNG.',
+        'id'   => 'icon',
+        'type' => 'file',
+        'preview_size' => array( 100, 100 )
+    ) );
+
+    $accordion_metabox->add_group_field( $accordion_metabox_group, array(
+        'name' => 'Color',
+        'desc' => 'Select a color for the border of this icon.',
+        'id'   => 'color',
+        'type' => 'select',
+        'default' => 'blue',
+        'options' => $colors
+    ) );
+
+    $accordion_metabox->add_group_field( $accordion_metabox_group, array(
+        'name' => 'Content',
+        'desc' => 'Include the content for this accordion section.',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
+        'sanitization_cb' => false
+    ) );
+
 }
 add_filter( 'cmb2_init', 'page_metaboxes' );
 
@@ -141,31 +244,3 @@ function show_cmb_wysiwyg_value( $field ) {
 }
 
 
-/*
-function cmb2_metabox_show_on_template( $display, $meta_box ) {
-    if ( isset( $meta_box['show_on']['key'] ) && isset( $meta_box['show_on']['value'] ) ) :
-        if( 'template' !== $meta_box['show_on']['key'] )
-            return $display;
-
-        // Get the current ID
-        if( isset( $_GET['post'] ) ) $post_id = $_GET['post'];
-        elseif( isset( $_POST['post_ID'] ) ) $post_id = $_POST['post_ID'];
-        if( !isset( $post_id ) ) return false;
-
-        $template_name = get_page_template_slug( $post_id );
-        if ( !empty( $template_name ) ) $template_name = substr($template_name, 0, -4);
-
-        // If value isn't an array, turn it into one
-        $meta_box['show_on']['value'] = !is_array( $meta_box['show_on']['value'] ) ? array( $meta_box['show_on']['value'] ) : $meta_box['show_on']['value'];
-
-        // See if there's a match
-        return in_array( $template_name, $meta_box['show_on']['value'] );
-    else:
-        return $display;
-    endif;
-}
-add_filter( 'cmb2_show_on', 'cmb2_metabox_show_on_template', 10, 2 );
-*/
-
-
-?>

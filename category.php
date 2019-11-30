@@ -11,7 +11,7 @@
 
 get_header(); ?>
 
-	<div class="content-wide" role="main">
+	<div class="main-content pad" role="main">
 
 		<?php 
 		if ( have_posts() ) : ?>

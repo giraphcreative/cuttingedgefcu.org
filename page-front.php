@@ -16,8 +16,9 @@ get_header();
 			<input type="submit" name="submit" class="arrow" />
 		</div>
 	</div>
-
-	<div class="home-pad content">
+	
+	<div class="main-content pad">
+		<div class="inner">
 			<?php 
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post(); 
@@ -25,21 +26,20 @@ get_header();
 				endwhile;
 			endif;
 			?>
-		<div class="home-pad icons text-center group">
-				
-			<?php the_icon_showcase(); ?>
+		</div>
 
+		<div class="icons text-center group">
+			<?php the_icon_showcase(); ?>
 		</div>
 	</div>
 
-	<div class="home-pad bg-grey-light group" role="main">
-		
+	<div class="bg-grey-dark group" role="main">
 		<?php the_ad_showcase(); ?>
-
 	</div>
 
+	<?php include( 'part-blog.php' ); ?>
 
-	<?php include( "part-blog.php" ); ?>
+	<?php the_accordion(); ?>
 
 <?php 
 

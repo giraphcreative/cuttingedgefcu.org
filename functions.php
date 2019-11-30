@@ -9,6 +9,7 @@ define( "CMB_PREFIX", "_p_" );
 include( "library/menus.php" );
 include( "library/scripts.php" );
 include( "library/widgets.php" );
+include( "library/buttons.php" );
 
 
 // an extra image manipulation function
@@ -20,14 +21,10 @@ include( "library/metabox.php" );
 
 
 // include quote metaboxes/functions
-// include( "library/title.php" );
 include( "library/showcase.php" );
-// include( "library/accordion.php" );
-
-
-
-// add editor stylesheet
-// add_editor_style( 'editor-style.css' );
+include( "library/title.php" );
+include( "library/icons.php" );
+include( "library/accordion.php" );
 
 
 // pagination
@@ -56,4 +53,3 @@ function pagination( $prev = '&laquo;', $next = '&raquo;' ) {
 }
 
 
-?>

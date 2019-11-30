@@ -1,21 +1,20 @@
 
 
-footer {
-	background: $forest url(../img/bg-footer.png) center center;
+.footer {
+	background: $purple url(../img/bg-footer.png) center center;
 	color: white;
 	padding: 20px 0;
+	font-size: .8em;
+	position: relative;
 	@include clearfix;
 
 	@include respond-to( 1024px ) {
 		padding: 30px;
 	}
 
-	@include respond-to( 1220px ) {
-		padding: 30px 40px;
-	}
-
-	.first span {
+	strong {
 		font-size: 1.2em; 
+		text-transform: uppercase;
 	}
 
 	.column {
@@ -30,16 +29,15 @@ footer {
 
 		@include respond-to( 1024px ) {
 			width: 20%;
-			border-right: 2px solid white;
-			min-height: 110px;
+			border-left: 2px solid white;
+			min-height: 275px;
 
 			&.first {
-				width: 40%;
-				border-right: 0;
+				border-left: 0;
 			}
 
-			&.last {
-				border-right: 0;
+ 			&.thirty {
+				width: 30%;
 			}
 		}
 
@@ -54,7 +52,14 @@ footer {
 	}
 
 	p {
-		padding: 0;
+		padding: 10px 0;
+	}
+
+	.social-facebook {
+		position: absolute;
+		bottom: 30px;
+		right: 30px;
+		max-width: 80px;
 	}
 }
 
@@ -65,20 +70,27 @@ footer {
 	.third {
 		@include font;
 		font-size: .7em;
+		line-height: 1.7em;
 
 		&.links {
-			font-size: 1em;
+			@include font-bold;
+			font-size: .8em;
+
+			a {
+				text-decoration: none;
+			}
 		}
 
 		&:first-child {
 			img {
-				max-width: 40%;
+				max-width: 30%;
 			}
 		}
 	}
 
 	img {
-		max-width: 30%;
+		max-width: 15%;
+		margin: 0 15px 0 0;
 	}
 }
 

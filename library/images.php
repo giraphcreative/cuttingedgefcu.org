@@ -7,21 +7,9 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' ); 
 	
 	// set the default thumbnail size
-	set_post_thumbnail_size( 500, 500, true );
+	set_post_thumbnail_size( 300, 200, true );
 
 }
-
-if ( function_exists( 'add_image_size' ) ) {
-
-	// set the default story thumbnail size
-	add_image_size( 'story-thumbnail', 500, 600, true );
-
-	// set a size for smaller story images
-	add_image_size( 'story-image-small', 500, 500, true );
-	add_image_size( 'story-image-large', 1000, 500, true );
-
-}
-
 
 
 
@@ -122,5 +110,3 @@ function p_is_image( $img_path ) {
     
 }
 
-
-?>

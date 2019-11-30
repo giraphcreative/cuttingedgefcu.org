@@ -1,0 +1,76 @@
+
+
+.icons {
+	padding: 10px 20px 30px;
+
+	a {
+		color: $purple;
+		text-decoration: none;
+
+		* {
+			transition: 400ms all ease-in-out;
+		}
+	}
+
+	.icon {
+		padding: 20px 30px;
+		border: 6px solid $grey;
+		box-shadow: 0 0 20px rgba( black, .2 );
+		margin-bottom: 20px;
+		background: white;
+
+		&.purple {
+			border-color: $purple;
+		}
+
+		&.lime {
+			border-color: $lime;
+		}
+
+		&.blue {
+			border-color: $blue;
+		}
+
+		&.navy {
+			border-color: $navy;
+		}
+
+		&.orange {
+			border-color: $orange;
+		}
+
+		&.grey-dark {
+			border-color: $grey-dark;
+		}
+
+		&.grey-light {
+			border-color: $grey-light;
+		}
+
+		@include respond-to( 768px ) {
+			margin: 0 1.5%;
+			width: 30%;
+		}
+	}
+
+	.super-title {
+		@include font-bold;
+		text-transform: uppercase;
+		padding: 15px 0 0;
+	}
+
+	h5 {
+		@include font-cursive;
+		text-transform: lowercase;
+		font-size: 50px;
+		line-height: 45px;
+		padding: 0 10px;
+		margin: 0;
+		color: $purple;
+
+		@include respond-to( 1024px ) {
+			font-size: 60px;
+		}
+	}
+}
+

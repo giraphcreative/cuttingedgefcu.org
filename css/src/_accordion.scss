@@ -1,0 +1,99 @@
+
+
+.accordion {
+	padding: 0 0 10px;
+	
+	.accordion-box-title {
+		position: relative;
+		cursor: pointer;
+		background-color: $grey;
+		margin-top: 10px;
+
+		.accordion-box-title-icon {
+			display: none;
+
+			@include respond-to( 600px ) {
+				display: block;
+				position: absolute;
+				top: 50%;
+				right: 50px;
+				border-radius: 50%;
+				border: 5px solid $grey;
+				padding: 20px;
+				text-align: center;
+				font-size: 25px;
+				line-height: 40px;
+				right: 15px;
+				margin-top: -50px;
+				width: 100px;
+				height: 100px;
+				line-height: 60px;
+				background: white;
+			}
+
+			@include respond-to( 800px ) {
+				width: 120px;
+				height: 120px;
+				margin-top: -60px;
+				right: 80px;
+			}
+		}
+
+		h4 {
+			font-size: 22px;
+			line-height: 26px;
+			font-style: normal;
+			color: white;
+			text-transform: uppercase;
+			padding: 20px;
+
+			@include respond-to( 600px ) {
+				font-size: 30px;
+				line-height: 50px;
+				padding: 15px 40px;
+			}
+
+			@include respond-to( 1024px ) {
+				padding: 20px 50px;
+			}
+		}
+	}
+
+	.accordion-box-content {
+		@extend .content-style;
+		@include clearfix;
+		display: none;
+		padding: 20px;
+
+		@include respond-to( 600px ) {
+			padding: 25px 40px;
+		}
+
+		@include respond-to( 1024px ) {
+			padding: 30px 50px;
+		}
+	}
+}
+
+
+.accordion-box.open .accordion-box-content {
+	display: block;
+}
+
+
+.accordion-box.blue .accordion-box-title { background-color: $blue; }
+.accordion-box.navy .accordion-box-title { background-color: $navy; }
+.accordion-box.lime .accordion-box-title { background-color: $lime; }
+.accordion-box.purple .accordion-box-title { background-color: $purple; }
+.accordion-box.orange .accordion-box-title { background-color: $orange; }
+.accordion-box.grey-light .accordion-box-title { background-color: $grey-light; }
+.accordion-box.grey-dark .accordion-box-title { background-color: $grey-dark; }
+
+.accordion-box.blue .accordion-box-title-icon { border-color: $orange; }
+.accordion-box.navy .accordion-box-title-icon { border-color: $lime; }
+.accordion-box.lime .accordion-box-title-icon { border-color: $navy; }
+.accordion-box.purple .accordion-box-title-icon { border-color: $blue; }
+.accordion-box.orange .accordion-box-title-icon { border-color: $blue; }
+.accordion-box.grey-light .accordion-box-title-icon { border-color: $grey-dark; }
+.accordion-box.grey-dark .accordion-box-title-icon { border-color: $grey-light; }
+
