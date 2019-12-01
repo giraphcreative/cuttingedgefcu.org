@@ -14,7 +14,6 @@ get_header(); ?>
 		} else {
 			?><h1>Our Blog</h1><?php
 		}
-		
 
 		if ( have_posts() ) : 
 

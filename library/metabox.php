@@ -147,7 +147,38 @@ function page_metaboxes( $meta_boxes ) {
         'options' => $colors
     ) );
 
-        
+
+
+    // showcase metabox
+    $promo_metabox = new_cmb2_box( array(
+        'id' => 'promo_metabox',
+        'title' => 'Promotion',
+        'object_types' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+    ));
+
+    $promo_metabox->add_field( array(
+        'name' => 'Promotion Image',
+        'desc' => 'Upload a promotion image.',
+        'id'   => CMB_PREFIX . 'promo-image',
+        'preview_size' => array( 300, 100 ),
+        'type' => 'file',
+    ) );
+
+    $promo_metabox->add_field( array(
+        'name' => 'Alt Text',
+        'id'   => CMB_PREFIX . 'promo-alt',
+        'type' => 'text',
+    ) );
+
+    $promo_metabox->add_field( array(
+        'name' => 'Link URL',
+        'id'   => CMB_PREFIX . 'promo-link',
+        'type' => 'text',
+    ) );
+
+
 
     // thumb showcase metabox
     $accordion_metabox = new_cmb2_box( array(

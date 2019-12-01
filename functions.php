@@ -24,6 +24,7 @@ include( "library/metabox.php" );
 include( "library/showcase.php" );
 include( "library/title.php" );
 include( "library/icons.php" );
+include( "library/promo.php" );
 include( "library/accordion.php" );
 
 

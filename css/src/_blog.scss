@@ -1,8 +1,9 @@
 
 
 .blog {
-	text-align: center;
 	@include clearfix;
+	text-align: center;
+	background: linear-gradient( 90deg, $grey-light, white, $grey-light);;
 
 	.blog-title {
 		margin: 10px 0;

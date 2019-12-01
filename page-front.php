@@ -34,7 +34,7 @@ get_header();
 	</div>
 
 	<div class="bg-grey-dark group" role="main">
-		<?php the_ad_showcase(); ?>
+		<?php the_promo(); ?>
 	</div>
 
 	<?php include( 'part-blog.php' ); ?>
