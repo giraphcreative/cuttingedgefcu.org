@@ -25,6 +25,16 @@ header {
 		padding: 0 0 10px;
 		border-top: 1px solid $grey;
 
+		&.scrolled {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1001;
+			border-bottom: 1px solid $grey;
+			box-shadow: 0 0 30px rgba( $grey, .5 );
+		}
+
 		@include respond-to( 1000px ) {
 			padding: 0 0 0 10px;
 		}
@@ -72,12 +82,12 @@ header {
 					@include respond-to( 1000px ) {
 						display: inline-block;
 						width: auto;
-						padding: 20px 15px;
+						padding: 22px 15px 21px;
 					}
 
 					@include respond-to( 1220px ) {
 						font-size: 17px;
-						padding: 21px 20px;
+						padding: 22px 20px 21px;
 					}
 				}
 

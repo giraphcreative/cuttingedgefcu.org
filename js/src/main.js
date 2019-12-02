@@ -85,6 +85,32 @@ jQuery(document).ready(function($){
 	}, 1000 );
 	$(window).resize( set_sidebar_height );
 
+
+	// let's do some scrolly scrolly magic with the menus, shall we?!
+	var menu_offset = $('.container-main-menu').offset();
+	
+	// update the menu offset variable on window resize
+	$(window).resize(function(){
+		menu_offset = $('.container-main-menu').offset();
+	});
+
+	// when we scroll
+	$(window).scroll(function(){
+
+		// if the menu is horizontal and we're scrolled past the top of the menu
+		if ( $(window).width() > 900 && $(window).scrollTop() > menu_offset.top ) {
+
+			// add the scrolled class
+			$('.container-main-menu').addClass( 'scrolled' );
+			
+		} else {
+
+			// or remove it if we're above the menu position on the page
+			$('.container-main-menu').removeClass( 'scrolled' );
+
+		}
+	});
+
 });
 
 /*
