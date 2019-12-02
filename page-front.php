@@ -9,12 +9,8 @@ get_header();
 ?>
 	
 	<div class="home-showcase">
-	<?php the_showcase(); ?>
-		<div class="online-branch">
-			<img src="<?php bloginfo( 'template_url' ); ?>/img/title-online-branch.png" />
-			<input type="text" name="username" placeholder="Username" />
-			<input type="submit" name="submit" class="arrow" />
-		</div>
+		<?php the_showcase(); ?>
+		<?php include( 'part-online-branch.php' ); ?>
 	</div>
 	
 	<div class="main-content pad">

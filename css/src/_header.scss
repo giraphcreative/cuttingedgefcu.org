@@ -167,5 +167,30 @@ header {
 			}
 		}
 	}
+
+	.online-branch {
+		@include respond-to( 840px ) {
+			position: absolute;
+			right: 280px;
+			top: 10px;
+			width: 30%;
+			max-width: 250px;
+			text-align: left;
+			border: 2px solid $blue;
+			border-radius: 15px;
+			padding: 10px;
+			
+			img {
+				max-width: 70%;
+			}
+
+			input[type=text] {
+				margin: 5px 0;
+				font-size: .9em;
+				border: 2px solid $blue;
+				width: 100%;
+			}
+		}
+	}
 }
 

@@ -36,6 +36,8 @@
 		</div>
 
 		<?php include( 'searchform.php' ); ?>
+
+		<?php if ( !is_front_page() ) include( 'part-online-branch.php' ); ?>
 		
 	</div>
 
