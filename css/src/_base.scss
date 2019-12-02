@@ -78,22 +78,3 @@ input[type=text], input[type=search], select {
 	border: 1px solid #ccc;
 }
 
-button, input[type=submit] {
-	@include font-title;
-	display: inline-block;
-	padding: 6px 20px;
-	max-width: 100%;
-	font-size: 1.2em;
-	background: $lime;
-	border: 0;
-	color: white;
-	text-transform: uppercase;
-	border-radius: 10px;
-
-	&.arrow {
-		background: $blue url(../img/bg-button-arrow.png) right center no-repeat;
-		font-size: 1em;
-		padding: 10px 45px 10px 20px;
-	}
-}
-

@@ -1,0 +1,37 @@
+
+
+button, input[type=submit], .btn {
+	@include font-bold;
+	display: inline-block;
+	padding: 6px 20px;
+	max-width: 100%;
+	background: $lime;
+	border: 0;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 10px;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&.arrow {
+		background: white url(../img/bg-button-arrow.png) right center no-repeat;
+		font-size: 1em;
+		padding: 7px 45px 7px 20px;
+		border: 2px solid $purple;
+		color: $purple;
+		border-radius: 0;
+	}
+
+	&.blue { background-color: $blue; }
+	&.purple { background-color: $purple; }
+	&.lime { background-color: $lime; }
+	&.orange { background-color: $orange; }
+	&.grey { background-color: $grey; }
+	&.grey-light { background-color: $grey-light; }
+	&.grey-dark { background-color: $grey-dark; }
+	&.white { background-color: white; color: $grey; }
+}
+

@@ -18,7 +18,7 @@
 		    <h3><a href="<?php the_permalink(); ?>"><?php print get_the_title(); ?></a></h3>
 		    <p><?php the_excerpt(); ?></p>
 		    <?php } ?>
-		    <a href="<?php the_permalink() ?>" class="btn white">Read More</a>
+		    <a href="<?php the_permalink() ?>" class="btn arrow">Read More</a>
 		</div>
 		    <?php 
 		} else {
