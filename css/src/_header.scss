@@ -35,6 +35,10 @@ header {
 			box-shadow: 0 0 30px rgba( $grey, .5 );
 		}
 
+		body.admin-bar &.scrolled {
+			top: 32px;
+		}
+
 		@include respond-to( 1000px ) {
 			padding: 0 0 0 10px;
 		}
