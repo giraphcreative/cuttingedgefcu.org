@@ -3,7 +3,7 @@
 .blog {
 	@include clearfix;
 	text-align: center;
-	background: linear-gradient( 90deg, $grey-light, white, $grey-light);;
+	background: url(../img/bg-gradient.png) center center repeat-y;
 
 	.blog-title {
 		margin: 10px 0;

@@ -24,7 +24,8 @@ header {
 	}
 
 	.container-main-menu {
-		background: linear-gradient( 90deg, $grey-light, white, $grey-light);;
+		background: url(../img/bg-gradient.png) center center repeat-y;
+		background-size: cover;
 		position: relative;
 		@include clearfix;
 		padding: 0 0 10px;
@@ -38,6 +39,12 @@ header {
 			z-index: 1001;
 			border-bottom: 1px solid $grey;
 			box-shadow: 0 0 30px rgba( $grey, .5 );
+
+			@include respond-to( 1220px ) {
+				left: 50%;
+				margin-left: -610px;
+				width: 1220px;
+			}
 		}
 
 		body.admin-bar &.scrolled {
