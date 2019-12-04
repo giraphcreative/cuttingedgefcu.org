@@ -97,8 +97,16 @@ jQuery(document).ready(function($){
 	// when we scroll
 	$(window).scroll(function(){
 
+		// set up a variable for the offset
+		var offset = menu_offset.top;
+
+		// if we have an 'admin-bar' class on the body. 
+		if ( $('body').hasClass('admin-bar') ) {
+			offset = menu_offset.top - 32;
+		}
+
 		// if the menu is horizontal and we're scrolled past the top of the menu
-		if ( $(window).width() > 900 && $(window).scrollTop() > menu_offset.top ) {
+		if ( $(window).width() > 900 && $(window).scrollTop() > offset ) {
 
 			// add the scrolled class
 			$('.container-main-menu').addClass( 'scrolled' );
