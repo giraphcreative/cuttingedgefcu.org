@@ -23,7 +23,7 @@
 
 <div class="container">
 
-<header>
+<header class="group">
 
 	<div class="wrap">
 
