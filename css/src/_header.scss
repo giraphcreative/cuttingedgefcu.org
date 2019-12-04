@@ -1,5 +1,10 @@
 
 
+body.fixed-menu {
+	padding-top: 61px;
+}
+
+
 header {
 	text-align: center;
 	position: relative;
@@ -116,6 +121,7 @@ header {
 						width: 200px;
 						z-index: 2000;
 						@include clearfix;
+						border: 1px solid $grey-light;
 					}
 
 					li {
@@ -127,13 +133,14 @@ header {
 							font-size: 14px;
 							line-height: 18px;
 							display: block;
-							background: rgba( $grey-light, .7 );
+							background: lighten( $grey-light, 5% );
+							color: $grey-dark;
 
 							@include respond-to( 1000px ) {
 								padding: 10px;
 
 								&:hover {
-									background: rgba( $grey-light, .9 );
+									background: lighten( $grey-light, 20% );
 								}
 							}
 

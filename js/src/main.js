@@ -61,6 +61,7 @@ jQuery(document).ready(function($){
 		if ( the_link.hasClass( 'bypass' ) ||
 			the_link_href.match( /cuttingedgefcu.test/i ) || 
 			the_link_href.match( /cuttingedgefcu.org/i ) || 
+			the_link_href.match( /ce.giraph.io/i ) || 
 			the_link_href.charAt(0) === '#' || 
 			the_link_href.charAt(0) === '/' ) {
 			location.href = the_link_href;
@@ -98,23 +99,25 @@ jQuery(document).ready(function($){
 	$(window).scroll(function(){
 
 		// set up a variable for the offset
-		var offset = menu_offset.top;
+		var voffset = menu_offset.top;
 
 		// if we have an 'admin-bar' class on the body. 
 		if ( $('body').hasClass('admin-bar') ) {
-			offset = menu_offset.top - 32;
+			voffset = menu_offset.top - 32;
 		}
 
 		// if the menu is horizontal and we're scrolled past the top of the menu
-		if ( $(window).width() > 900 && $(window).scrollTop() > offset ) {
+		if ( $(window).width() > 900 && $(window).scrollTop() > voffset ) {
 
 			// add the scrolled class
 			$('.container-main-menu').addClass( 'scrolled' );
+			$('body').addClass( 'fixed-menu' );
 			
 		} else {
 
 			// or remove it if we're above the menu position on the page
 			$('.container-main-menu').removeClass( 'scrolled' );
+			$('body').removeClass( 'fixed-menu' );
 
 		}
 	});
