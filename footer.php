@@ -25,7 +25,7 @@
 		<div class="column thirty last">
 			<?php print apply_filters( 'the_content', do_shortcode('[snippet slug="footer-4" /]')) ?>
 		</div>
-		<a href="https://www.facebook.com/FRFCU/" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-facebook.png" class="social-facebook" alt="Go to our Facebook Page"></a>
+		<a href="https://www.facebook.com/cuttingedgefcu/" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-facebook.png" class="social-facebook" alt="Go to our Facebook Page"></a>
 	</footer><!-- #colophon -->
 
 	<div class="colophon">
