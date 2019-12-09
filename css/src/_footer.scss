@@ -12,9 +12,21 @@
 		padding: 30px;
 	}
 
+	@include respond-to( 1440px ) {
+		padding: 30px 80px;
+	}
+
 	strong {
 		font-size: 1.2em; 
 		text-transform: uppercase;
+	}
+
+	a {
+		color: white;
+
+		&:hover {
+			opacity: .8;
+		}
 	}
 
 	.column {
@@ -66,6 +78,10 @@
 
 .colophon {
 	@include clearfix;
+
+	@include respond-to( 1440px ) {
+		padding: 30px 70px;
+	}
 	
 	.third {
 		@include font;

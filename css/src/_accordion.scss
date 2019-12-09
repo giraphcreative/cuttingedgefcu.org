@@ -37,6 +37,13 @@
 				margin-top: -60px;
 				right: 80px;
 			}
+
+			@include respond-to( 1440px ) {
+				width: 160px;
+				height: 160px;
+				margin-top: -80px;
+				right: 100px;
+			}
 		}
 
 		h4 {
@@ -56,6 +63,10 @@
 			@include respond-to( 1024px ) {
 				padding: 20px 50px;
 			}
+
+			@include respond-to( 1440px ) {
+				padding: 30px 100px;
+			}
 		}
 	}
 
@@ -71,6 +82,10 @@
 
 		@include respond-to( 1024px ) {
 			padding: 30px 50px;
+		}
+
+		@include respond-to( 1440px ) {
+			padding: 30px 100px 60px;
 		}
 	}
 }

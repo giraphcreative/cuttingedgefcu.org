@@ -40,7 +40,7 @@
 		</div>
 	</div>
 
-</div><!-- #container -->
+<!--</div> #container -->
 
 <?php wp_footer(); ?>
 </body>

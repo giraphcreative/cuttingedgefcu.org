@@ -7,6 +7,16 @@ body {
 	line-height: 22px;
 	color: $grey-dark;
 	background: #f8f8f8;
+
+	@include respond-to( 1440px ) {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	@include respond-to( 2000px ) {
+		font-size: 28px;
+		line-height: 38px;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {

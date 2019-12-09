@@ -2,6 +2,7 @@
 
 .large-title {
 	background: url(../img/bg-gradient-blue.png) center center repeat-y;
+	background-size: cover;
 	padding: 20px;
 	@include clearfix;
 
@@ -11,6 +12,10 @@
 
 	@include respond-to( 1024px ) {
 		padding: 20px 50px;
+	}
+
+	@include respond-to( 1440px ) {
+		padding: 20px 100px;
 	}
 
 	h1 {
