@@ -14,8 +14,8 @@ body {
 	}
 
 	@include respond-to( 2000px ) {
-		font-size: 28px;
-		line-height: 38px;
+		font-size: 2rem;
+		line-height: 2.7rem;
 	}
 }
 

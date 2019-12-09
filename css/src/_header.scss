@@ -112,11 +112,6 @@ header {
 						padding: 22px 20px 21px;
 					}
 
-					@include respond-to( 1440px ) {
-						font-size: 20px;
-						padding: 22px 20px 21px;
-					}
-
 					@include respond-to( 2000px ) {
 						font-size: 25px;
 						padding: 30px 21px;
