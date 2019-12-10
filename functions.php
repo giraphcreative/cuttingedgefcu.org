@@ -21,6 +21,7 @@ include( "library/metabox.php" );
 
 
 // include quote metaboxes/functions
+include( "library/emergency.php" );
 include( "library/showcase.php" );
 include( "library/title.php" );
 include( "library/icons.php" );

@@ -1,0 +1,113 @@
+
+
+.emergency-bar-container {
+	background: $grey-light;
+	padding: 10px 10px 7px 10px;
+	color: $grey-dark;
+	@include clearfix;
+	display: none;
+	position: relative;
+	z-index: 200;
+	border-bottom: 1px solid $grey;
+	text-align: center;
+
+	a {
+		color: $grey;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&.show {
+		display: block;
+	}
+
+	.fa-close {
+		float: right;
+		margin: 0 0 3px 20px;
+		cursor: hand;
+	}
+
+	&.red {
+		background: lighten( $red, 40% );
+		color: $red;
+		border-bottom: 1px solid $red;
+
+		a {
+			color: $red;
+		}
+	}
+
+	&.purple {
+		background: lighten( $purple, 50% );
+		color: $purple;
+		border-bottom: 1px solid $purple;
+
+		a {
+			color: $purple;
+		}
+	}
+
+	&.orange {
+		background: lighten( $orange, 35% );
+		color: $orange;
+		border-bottom: 1px solid $orange;
+
+		a {
+			color: $orange;
+		}
+	}
+
+	&.yellow {
+		background: lighten( $yellow, 40% );
+		color: darken( $yellow, 10% );
+		border-bottom: 1px solid $yellow;
+
+		a {
+			color: $yellow;
+		}
+	}
+
+	&.green {
+		background: lighten( $green, 35% );
+		color: $green;
+		border-bottom: 1px solid $green;
+
+		a {
+			color: $green;
+		}
+	}
+
+	&.lime {
+		background: lighten( $lime, 35% );
+		color: $lime;
+		border-bottom: 1px solid $lime;
+
+		a {
+			color: $lime;
+		}
+	}
+
+	&.navy {
+		background: lighten( $navy, 45% );
+		color: $navy;
+		border-bottom: 1px solid $navy;
+
+		a {
+			color: $navy;
+		}
+	}
+
+	&.blue {
+		background: lighten( $blue, 40% );
+		color: $blue;
+		border-bottom: 1px solid $blue;
+
+		a {
+			color: $blue;
+		}
+	}
+}
+
