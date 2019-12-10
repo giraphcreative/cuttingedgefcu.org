@@ -8,7 +8,7 @@ body {
 	color: $grey-dark;
 	background: #f8f8f8;
 
-	@include respond-to( 1440px ) {
+	@include respond-to( 1680px ) {
 		font-size: 20px;
 		line-height: 28px;
 	}
