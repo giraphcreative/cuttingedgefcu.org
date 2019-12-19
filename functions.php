@@ -18,10 +18,12 @@ include( "library/images.php" );
 
 // include our metaboxes library
 include( "library/metabox.php" );
+include( "library/metabox-theme.php" );
 
 
 // include quote metaboxes/functions
 include( "library/emergency.php" );
+include( "library/mobile.php" );
 include( "library/showcase.php" );
 include( "library/title.php" );
 include( "library/icons.php" );

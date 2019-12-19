@@ -21,6 +21,7 @@
 </head>
 <body <?php body_class(); ?>>
 
+<?php mobile_bars() ?>
 <?php the_emergency_bar(); ?>
 
 <!-- <div class="container"> -->
