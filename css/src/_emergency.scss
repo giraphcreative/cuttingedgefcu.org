@@ -2,14 +2,13 @@
 
 .emergency-bar-container {
 	background: $grey-light;
-	padding: 10px 10px 7px 10px;
+	padding: 10px 20px;
 	color: $grey-dark;
 	@include clearfix;
 	display: none;
 	position: relative;
 	z-index: 200;
 	border-bottom: 1px solid $grey;
-	text-align: center;
 	font-size: .85em;
 
 	a {
@@ -26,8 +25,9 @@
 	}
 
 	.fa-close {
-		float: right;
-		margin: 0 0 3px 20px;
+		position: absolute;
+		right: 10px;
+		top: 10px;
 		cursor: hand;
 		transform: scale( 1.4, 1.0 );
 	}
