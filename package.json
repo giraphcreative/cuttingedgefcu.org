@@ -2,14 +2,14 @@
     "name": "cuttingedge",
     "version": "0.0.1",
     "devDependencies": {
-        "grunt": "^1.0.4",
+        "grunt": "*",
         "grunt-autoprefixer": "*",
         "grunt-contrib-sass": "*",
         "grunt-contrib-uglify": "*",
-        "grunt-contrib-watch": "^1.1.0",
-        "matchdep": "^2.0.0"
+        "grunt-contrib-watch": "*",
+        "matchdep": "*"
     },
     "dependencies": {
-        "current-device": "^0.10.0"
+        "current-device": "*"
     }
 }
