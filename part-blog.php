@@ -20,9 +20,10 @@
 		    <a href="<?php the_permalink() ?>" class="btn arrow">Read More</a>
 		</div>
 		    <?php 
-		} else {
-		    // no posts found
-		}
+			} else {
+			    // no posts found
+			}
+	    }
 		/* Restore original Post Data */
 		wp_reset_postdata();
 		?>
