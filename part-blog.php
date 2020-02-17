@@ -11,7 +11,8 @@
 		 
 		// The Loop
 		if ( $the_query->have_posts() ) { 
-		    while ( $the_query->have_posts() ) {?>
+		    while ( $the_query->have_posts() ) { 
+		    	?>
 	    <div class="entry">
 		    <?php $the_query->the_post(); ?>
 		    <?php the_post_thumbnail(); ?>
@@ -19,9 +20,7 @@
 		    <p><?php the_excerpt(); ?></p>
 		    <a href="<?php the_permalink() ?>" class="btn arrow">Read More</a>
 		</div>
-		    <?php 
-			} else {
-			    // no posts found
+		    	<?php 
 			}
 	    }
 		/* Restore original Post Data */
