@@ -3,7 +3,8 @@
 		<div class="blog-listing">
 		<?php
 		$args = array(
-			'post_type' => array( 'post', 'event' )
+			'post_type' => array( 'post', 'event' ),
+			'post_count' => 3
 		);
 
 		// The Query
