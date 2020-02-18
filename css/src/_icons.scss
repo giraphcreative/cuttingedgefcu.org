@@ -48,12 +48,14 @@
 		}
 
 		@include respond-to( 768px ) {
-			margin: 0 1.5%;
+			margin: 0 1.5% 20px;
 			width: 30%;
 		}
 
 		@include respond-to( 1440px ) {
-			padding: 50px;
+			padding: 70px 0;
+			width: 28%;
+			margin: 0 3% 20px;
 		}
 	}
 
