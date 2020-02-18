@@ -24,7 +24,6 @@ get_header(); ?>
 				<hr />
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<?php the_excerpt(); ?>
-				<p class="quiet">Posted by <?php print get_the_author_link() ?> in <?php print ( $post_type != 'post' ? ucfirst( $post_type ) . "s" : get_the_category_list( ', ' ) ); ?>.</p>
 				<?php
 			endwhile;
 
