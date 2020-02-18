@@ -142,5 +142,5 @@
 
 // run on load
 jQuery(document).ready(function($){
-	$("a").creep();
+	$(".main-content a").creep();
 });
