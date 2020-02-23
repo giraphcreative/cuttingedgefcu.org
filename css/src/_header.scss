@@ -64,7 +64,8 @@ header {
 		.button {
 			@include respond-to( 1000px ) {
 				float: right;
-				margin: 7px 20px 0 0;
+				margin: 9px 20px 0 0;
+				width: 200px;
 			}
 		}
 
@@ -101,15 +102,15 @@ header {
 					width: 100%;
 					transition: 300ms background-color ease-in-out;
 
-					@include respond-to( 1000px ) {
+					@include respond-to( 1024px ) {
 						display: inline-block;
 						width: auto;
-						padding: 22px 15px 21px;
+						padding: 22px 8px 21px;
 					}
 
 					@include respond-to( 1220px ) {
 						font-size: 17px;
-						padding: 22px 20px 21px;
+						padding: 22px 15px 21px;
 					}
 
 					@include respond-to( 2000px ) {
@@ -162,7 +163,7 @@ header {
 							text-align: left;
 
 							@include respond-to( 1000px ) {
-								padding: 10px 15px;
+								padding: 10px 10px;
 
 								&:hover {
 									background: lighten( $grey-light, 20% );
@@ -170,7 +171,7 @@ header {
 							}
 
 							@include respond-to( 1220px ) {
-								padding: 12px 20px;
+								padding: 12px 15px;
 							}
 
 							@include respond-to( 2000px ) {
