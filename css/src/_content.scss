@@ -62,7 +62,7 @@
 
 	.quiet {
 		font-size: .85em;
-		color: $grey;
+		color: lighten( $grey-dark, 20% );
 
 		a {
 			color: lighten( $grey, 10% );

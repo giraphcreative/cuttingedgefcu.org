@@ -29,6 +29,7 @@ include( "library/title.php" );
 include( "library/icons.php" );
 include( "library/promo.php" );
 include( "library/accordion.php" );
+include( "library/editor.php" );
 
 
 // pagination
