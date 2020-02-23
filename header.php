@@ -46,7 +46,7 @@
 
 	<nav class="container-main-menu" role="navigation">
 		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
-		<a href="#"><img src="<?php bloginfo('template_url'); ?>/img/button-join.png" class="button" /></a>
+		<a href="/join"><img src="<?php bloginfo('template_url'); ?>/img/button-join.png" class="button" /></a>
 	</nav>
 	
 </header>
