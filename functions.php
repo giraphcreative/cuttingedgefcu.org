@@ -32,6 +32,10 @@ include( "library/accordion.php" );
 include( "library/editor.php" );
 
 
+// add support for excerpts on pages.
+add_post_type_support( 'page', 'excerpt' );
+
+
 // pagination
 function pagination( $prev = '&laquo;', $next = '&raquo;' ) {
     global $wp_query, $wp_rewrite;
