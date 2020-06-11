@@ -9,7 +9,8 @@ define( "CMB_PREFIX", "_p_" );
 include( "library/menus.php" );
 include( "library/scripts.php" );
 include( "library/widgets.php" );
-include( "library/buttons.php" );
+include( "library/button.php" );
+include( "library/calculator.php" );
 
 
 // an extra image manipulation function

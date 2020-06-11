@@ -53,6 +53,30 @@
 		padding: 0;
 		margin: 25px 0;
 	}
+	
+	table {
+		width: 100%;
+
+		tr {
+			th {
+				vertical-align: top;
+				padding: 8px 10px;
+				background: #666;
+				color: white;
+			}
+
+			td {
+				vertical-align: top;
+				padding: 7px 10px;
+				border-bottom: 1px solid #ddd;
+			}
+		}
+
+		&.accrue-amortization {
+			text-align: right;
+			border: 1px solid #aaa;
+		}
+	}
 
 	.postmeta {
 		margin-top: 15px;
