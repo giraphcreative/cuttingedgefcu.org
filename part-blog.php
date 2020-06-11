@@ -4,7 +4,7 @@
 		<?php
 		$args = array(
 			'post_type' => array( 'post', 'event' ),
-			'post_count' => 3
+			'numberposts' => 3
 		);
 
 		// The Query
