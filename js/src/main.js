@@ -61,6 +61,7 @@ jQuery(document).ready(function($){
 		if ( the_link.hasClass( 'bypass' ) ||
 			the_link_href.match( /cuttingedgefcu.test/i ) || 
 			the_link_href.match( /cuttingedgefcu.org/i ) || 
+			the_link_href.match( /loanliner.com/i ) || 
 			the_link_href.match( /ce.giraph.io/i ) || 
 			the_link_href.charAt(0) === '#' || 
 			the_link_href.charAt(0) === '/' ) {
