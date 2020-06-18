@@ -31,6 +31,7 @@ include( "library/icons.php" );
 include( "library/promo.php" );
 include( "library/accordion.php" );
 include( "library/editor.php" );
+include( "library/tcalc.php" );
 
 
 // add support for excerpts on pages.
