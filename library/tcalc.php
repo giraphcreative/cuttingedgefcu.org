@@ -19,32 +19,6 @@ function SiteMigrationAlert(TVSURL)
 </script>
 <!--End Speed Bump-->
 
-
-<!--Begin Send To Friend-->
-<a href="mailto:?subject=financial calculators" id="tvcMailToLinkId">
-	<img src="https://www.timevaluecalculators.com/timevaluecalculators/images/email_icon.png" title="Email this to a friend" alt="Email page" />
-</a>
-<script language="JavaScript" type="text/javascript">
-	var tvcMailToSubject;
-	var tvcMailToBody; 
-	var tvcQueryString = unescape(document.location.search);
-	var tvcMailToLinkElement = document.getElementById('tvcMailToLinkId');
-	if (tvcMailToLinkElement) {
-		if (tvcQueryString.indexOf("CALCULATORID") == -1)		/* If we are displaying the list of calculators, just put the current location in the body. */
-		{
-			tvcMailToSubject = 'financial calculators';
-			tvcMailToBody = 'Hello,%0A%0ATake a look at these online financial calculators.%0A%0A' + escape(document.location.href + '\n\n');
-		}
-		else		/* If we are displaying a calculator, add the actual calculation to the body. */
-		{
-			tvcMailToSubject = 'financial calculation';
-			tvcMailToBody = 'Hello,%0A%0ATake a look at this online financial calculation.%0A%0A' + escape(document.location.href + '\n\n');
-		}
-		tvcMailToLinkElement.href = 'mailto:?subject=' + tvcMailToSubject + '&body=' + tvcMailToBody;
-	}
-</script>
-<!--End Send To Friend-->
-
 <!--Begin Print This-->
 <a href="javascript:window.print();" id="tvcPrintThisLinkId">
 <img src="https://www.timevaluecalculators.com/timevaluecalculators/images/print_icon.png" title="Print this page"  alt="Print page" />
