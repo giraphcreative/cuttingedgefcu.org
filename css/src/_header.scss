@@ -201,8 +201,8 @@ header {
 		@include respond-to( 840px ) {
 			display: block;
 			position: absolute;
-			right: 100px;
-			top: 10px;
+			right: 40px;
+			top: 20px;
 			width: 30%;
 			max-width: 250px;
 			height: 120px;
@@ -237,8 +237,8 @@ header {
 	.online-branch {
 		@include respond-to( 840px ) {
 			position: absolute;
-			right: 370px;
-			top: 10px;
+			right: 320px;
+			top: 20px;
 			width: 30%;
 			max-width: 250px;
 			height: 120px;
