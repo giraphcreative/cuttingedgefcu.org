@@ -2,7 +2,8 @@
 
 
 // init cmb2
-require_once( 'cmb2/init.php' );
+// require_once( 'cmb2/init.php' );
+// eliminated because we're using the CMB2 plugin for WordPress now
 
 
 $colors = array(
