@@ -213,10 +213,15 @@ header {
 			padding: 10px;
 			
 			input[type=text] {
-				margin: 5px 0;
+				margin: 5px 0 0;
 				font-size: .9em;
+				line-height: 1.2em;
 				border: 2px solid $lime;
 				width: 100%;
+			}
+
+			input[type=submit] {
+				margin: 3px 0;
 			}
 		}
 
@@ -248,10 +253,15 @@ header {
 			}
 
 			input[type=text] {
-				margin: 5px 0;
+				margin: 5px 0 0;
 				font-size: .9em;
+				line-height: 1.2em;
 				border: 2px solid $blue;
 				width: 100%;
+			}
+
+			input[type=submit] {
+				margin: 3px 0;
 			}
 		}
 
