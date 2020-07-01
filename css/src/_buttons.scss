@@ -36,3 +36,10 @@ button, input[type=submit], .btn {
 	&.white { background-color: white; color: $grey; }
 }
 
+
+input[type=submit] {
+	background-color: $blue;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
