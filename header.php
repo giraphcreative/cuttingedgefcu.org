@@ -16,7 +16,7 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=20" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=21" rel="stylesheet" type="text/css">
 
 <!-- begin favicon -->
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -60,7 +60,7 @@
 
 		<?php include( 'searchform.php' ); ?>
 
-		<?php if ( !is_front_page() ) include( 'part-online-branch.php' ); ?>
+		<?php include( 'part-online-branch.php' ); ?>
 		
 	</div>
 

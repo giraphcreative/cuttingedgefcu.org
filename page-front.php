@@ -10,7 +10,6 @@ get_header();
 	
 	<div class="home-showcase">
 		<?php the_showcase(); ?>
-		<?php include( 'part-online-branch.php' ); ?>
 	</div>
 	
 	<div class="main-content pad">

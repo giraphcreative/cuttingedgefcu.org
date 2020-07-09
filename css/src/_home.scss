@@ -19,26 +19,5 @@
 
 .home-showcase {
 	position: relative;
-
-	.online-branch {
-		display: none;
-
-		@include respond-to( 840px ) {
-			display: block;
-			position: absolute;
-			right: 50px;
-			bottom: 50px;
-			width: 30%;
-			max-width: 300px;
-			background: white;
-			border: 2px solid $blue;
-			border-radius: 20px;
-			padding: 20px;
-
-			input[type=text] {
-				margin: 10px 0;
-			}
-		}
-	}
 }
 

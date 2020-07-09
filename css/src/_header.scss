@@ -235,6 +235,28 @@ header {
 	}
 
 	.online-branch {
+		text-align: left;
+		border: 2px solid $blue;
+		border-radius: 15px;
+		padding: 10px;
+		margin: 10px;		
+		
+		img {
+			max-width: 70%;
+		}
+
+		input[type=text] {
+			margin: 5px 0 0;
+			font-size: .9em;
+			line-height: 1.2em;
+			border: 2px solid $blue;
+			width: 100%;
+		}
+
+		input[type=submit] {
+			margin: 3px 0;
+		}
+
 		@include respond-to( 840px ) {
 			position: absolute;
 			right: 320px;
@@ -246,22 +268,7 @@ header {
 			border: 2px solid $blue;
 			border-radius: 15px;
 			padding: 10px;
-			
-			img {
-				max-width: 70%;
-			}
-
-			input[type=text] {
-				margin: 5px 0 0;
-				font-size: .9em;
-				line-height: 1.2em;
-				border: 2px solid $blue;
-				width: 100%;
-			}
-
-			input[type=submit] {
-				margin: 3px 0;
-			}
+			margin: 0;
 		}
 
 		@include respond-to( 1440px ) {
