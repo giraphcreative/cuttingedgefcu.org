@@ -3,7 +3,7 @@
 		<div class="blog-listing">
 		<?php
 		$args = array(
-			'post_type' => array( 'post', 'event' ),
+			'post_type' => array( 'post' ),
 			'posts_per_page' => 3
 		);
 
@@ -12,7 +12,9 @@
 		 
 		// The Loop
 		if ( $the_query->have_posts() ) { 
-		    while ( $the_query->have_posts() ) { 
+	    	$count = 1;
+		    while ( $the_query->have_posts() ) {
+		    	if ( $count < 4 ) {
 		    	?>
 	    <div class="entry">
 		    <?php $the_query->the_post(); ?>
@@ -21,7 +23,9 @@
 		    <p><?php the_excerpt(); ?></p>
 		    <a href="<?php the_permalink() ?>" class="btn arrow">Read More</a>
 		</div>
-		    	<?php 
+		    	<?php
+		    	}
+		    	$count++;
 			}
 	    }
 		/* Restore original Post Data */
