@@ -12,7 +12,9 @@
 		 
 		// The Loop
 		if ( $the_query->have_posts() ) { 
+	    	$count = 1;
 		    while ( $the_query->have_posts() ) {
+		    	if ( $count < 4 ) {
 		    	?>
 	    <div class="entry">
 		    <?php $the_query->the_post(); ?>
@@ -22,6 +24,8 @@
 		    <a href="<?php the_permalink() ?>" class="btn arrow">Read More</a>
 		</div>
 		    	<?php
+		    	}
+		    	$count++;
 			}
 	    }
 		/* Restore original Post Data */
