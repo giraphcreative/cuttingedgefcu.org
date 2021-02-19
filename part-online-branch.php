@@ -4,6 +4,7 @@
 		<input type="text" name="id" id="id" autocomplete="off" onfocus="if(this.value=='NetTeller ID') this.value='';" onblur="if(this.value=='') this.value='NetTeller ID';">
 		<input type="hidden" name="pin" id="pin">
 		<input type="submit" name="submitButton" id="submitButton" value="Login">
+		<a href="https://www.netteller.com/login2008/Authentication/Views/OnlineEnrollmentAgreement.aspx" class="new-user btn">New User</a>
 	</form>
 </div>
 

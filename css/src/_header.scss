@@ -253,6 +253,13 @@ header {
 			width: 100%;
 		}
 
+		.new-user {
+			text-transform: uppercase;
+			font-size: .85em;
+			line-height: 1.2em;
+			padding: 6px 20px;
+		}
+
 		input[type=submit] {
 			margin: 3px 0;
 		}
