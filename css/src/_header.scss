@@ -49,31 +49,30 @@ header {
 			top: 32px;
 		}
 
-		@include respond-to( 1000px ) {
+		@include respond-to( 1024px ) {
 			padding: 0 0 0 10px;
-		}
-
-		@include respond-to( 1100px ) {
-			padding: 0 0 0 30px;
-		}
-
-		@include respond-to( 1440px ) {
-			padding: 0 80px 0 85px;
+			display: flex;
 		}
 		
 		.button {
-			@include respond-to( 1000px ) {
-				float: right;
-				margin: 9px 20px 0 0;
+			@include respond-to( 1024px ) {
 				width: 200px;
+				flex: 1;
+				padding: 5px 5px 0 0;
+				text-align: right;
+			}
+
+			@include respond-to( 2000px ) {
+				padding: 10px 10px 0 0;
 			}
 		}
 
 		ul.nav-menu {
 			padding: 10px 0;
 
-			@include respond-to( 1000px ) {
-				float: left;
+			@include respond-to( 1024px ) {
+				flex: 1;
+				display: flex;
 				height: 60px;
 				padding: 0;
 			}
@@ -83,13 +82,12 @@ header {
 			}
 			
 			li {
-				@include respond-to( 1000px ) {				
-					display: inline-block;
+				@include respond-to( 1024px ) {				
+					flex: 1;
 					position: relative;
-					float: left;
 				}
 
-				a {
+				& > a {
 					@include font-bold;
 					display: block;
 					padding: 10px 5px 8px;
@@ -101,6 +99,7 @@ header {
 					text-transform: uppercase;
 					width: 100%;
 					transition: 300ms background-color ease-in-out;
+					white-space: nowrap;
 
 					@include respond-to( 1024px ) {
 						display: inline-block;
@@ -109,7 +108,7 @@ header {
 					}
 
 					@include respond-to( 1220px ) {
-						font-size: 17px;
+						font-size: 16px;
 						padding: 22px 15px 21px;
 					}
 
@@ -133,7 +132,7 @@ header {
 					display: none;
 					margin-bottom: 3px;
 
-					@include respond-to( 600px ) {
+					@include respond-to( 1024px ) {
 						position: absolute;
 						left: 0;
 						top: 60px;
@@ -162,7 +161,7 @@ header {
 							color: $grey-dark;
 							text-align: left;
 
-							@include respond-to( 1000px ) {
+							@include respond-to( 1024px ) {
 								padding: 10px 10px;
 
 								&:hover {

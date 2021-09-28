@@ -16,7 +16,7 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=23" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=24" rel="stylesheet" type="text/css">
 
 <!-- begin favicon -->
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -66,7 +66,9 @@
 
 	<nav class="container-main-menu" role="navigation">
 		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
-		<a href="/join"><img src="<?php bloginfo('template_url'); ?>/img/button-join.png" class="button" /></a>
+		<div class="button">
+			<a href="/join"><img src="<?php bloginfo('template_url'); ?>/img/button-join.png" class="button" /></a>
+		</div>
 	</nav>
 	
 </header>
