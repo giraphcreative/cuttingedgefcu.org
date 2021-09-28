@@ -221,6 +221,11 @@ header {
 			input[type=submit] {
 				margin: 3px 0;
 			}
+
+			.btn {
+				font-size: .85em;
+				line-height: 1.2em;
+			}
 		}
 
 		@include respond-to( 1440px ) {
