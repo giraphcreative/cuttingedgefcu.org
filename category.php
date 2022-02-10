@@ -13,30 +13,32 @@ get_header(); ?>
 
 	<div class="main-content pad" role="main">
 
+		<h1><span><?php printf( single_cat_title( '', false ) ); ?></span> Blog</h1>
+		<hr>
+
+		<div class="blog-columns">
+			<div class="blog-listing">
 		<?php 
-		if ( have_posts() ) : ?>
-
-			<h1>Category: <span><?php printf( single_cat_title( '', false ) ); ?></span></h1>
-
-			<?php
-			// Show an optional term description.
-			$term_description = term_description();
-			if ( ! empty( $term_description ) ) :
-				printf( '<div class="description">%s</div>', $term_description );
-			endif;
-
+		if ( have_posts() ) : 
 
 			while ( have_posts() ) : the_post(); 
 				?>
-				<hr />
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<?php the_excerpt(); ?>
-				<p class="quiet">Posted by <?php print get_the_author_link() ?> in <?php print get_the_category_list( ', ' ) ?>.</p>
+			    <div class="entry">
+				    <?php the_post_thumbnail( array( 768, 480 ) ); ?>
+				    <h3><a href="<?php the_permalink(); ?>"><?php print get_the_title(); ?></a></h3>
+				    <p><?php the_excerpt(); ?></p>
+				    <a href="<?php the_permalink() ?>" class="btn arrow">Read More</a>
+				</div>
 				<?php
 			endwhile;
 
 		endif;
 		?>
+			</div>
+			<div class="aside">
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-blog') ) : ?><!-- no sidebar --><?php endif; ?>
+			</div>
+		</div><!-- #content -->
 	</div><!-- #content -->
 
 	<?php pagination(); ?>

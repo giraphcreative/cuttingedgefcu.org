@@ -7,8 +7,18 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' ); 
 	
 	// set the default thumbnail size
-	set_post_thumbnail_size( 300, 200, true );
+	set_post_thumbnail_size( 400, 275, true );
 
+}
+
+
+// remove the width and height attributes of images.
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
 }
 
 

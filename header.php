@@ -16,7 +16,17 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=25" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=26" rel="stylesheet" type="text/css">
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MFVHJJV');</script>
+
+<meta name="facebook-domain-verification" content="ltz2vrg4d9tgl2bjnssgtdecqipouz" />
+
+<?php if ( is_front_page() ) { ?><meta name="google-site-verification" content="dxPIDXwWjffPPM3Eq1hYi9VnArf3Sf8CTRMqRZsb5b8" /><?php } ?>
 
 <!-- begin favicon -->
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -40,6 +50,9 @@
 
 </head>
 <body <?php body_class(); ?>>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFVHJJV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <?php mobile_bars() ?>
 <?php the_emergency_bar(); ?>

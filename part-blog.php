@@ -4,6 +4,7 @@
 		<?php
 		$args = array(
 			'post_type' => array( 'post' ),
+			'category__not_in' => array( 4, 6 ),
 			'posts_per_page' => 3
 		);
 
