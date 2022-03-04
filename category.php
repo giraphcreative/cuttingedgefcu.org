@@ -13,8 +13,9 @@ get_header(); ?>
 
 	<div class="main-content pad" role="main">
 
-		<h1><span><?php printf( single_cat_title( '', false ) ); ?></span></h1>
-		<hr>
+		<div class="large-title">
+			<h1><?php printf( single_cat_title( '', false ) ); ?></h1>
+		</div>
 
 		<div class="blog-columns">
 			<div class="blog-listing">
