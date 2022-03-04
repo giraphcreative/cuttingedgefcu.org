@@ -13,7 +13,7 @@ get_header(); ?>
 
 	<div class="main-content pad" role="main">
 
-		<h1><span><?php printf( single_cat_title( '', false ) ); ?></span> Blog</h1>
+		<h1><span><?php printf( single_cat_title( '', false ) ); ?></span></h1>
 		<hr>
 
 		<div class="blog-columns">
