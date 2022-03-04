@@ -11,11 +11,11 @@
 
 get_header(); ?>
 
-	<div class="main-content pad" role="main">
+	<div class="large-title">
+		<h1><?php printf( single_cat_title( '', false ) ); ?></h1>
+	</div>
 
-		<div class="large-title">
-			<h1><?php printf( single_cat_title( '', false ) ); ?></h1>
-		</div>
+	<div class="main-content pad" role="main">
 
 		<div class="blog-columns">
 			<div class="blog-listing">
