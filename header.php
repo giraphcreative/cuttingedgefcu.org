@@ -3,6 +3,9 @@
 <!--[if IE 8]><html class="ie ie8" <?php language_attributes(); ?>><![endif]-->
 <!--[if !(IE 7) | !(IE 8)  ]><!--><html <?php language_attributes(); ?>><!--<![endif]-->
 <head>
+
+<meta name="facebook-domain-verification" content="ltz2vrg4d9tgl2bjnssgtdecqipouz" />
+
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
@@ -24,7 +27,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MFVHJJV');</script>
 
-<meta name="facebook-domain-verification" content="ltz2vrg4d9tgl2bjnssgtdecqipouz" />
 
 <?php if ( is_front_page() ) { ?><meta name="google-site-verification" content="dxPIDXwWjffPPM3Eq1hYi9VnArf3Sf8CTRMqRZsb5b8" /><?php } ?>
 
