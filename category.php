@@ -37,7 +37,9 @@ get_header(); ?>
 		?>
 			</div>
 			<div class="aside">
-				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-blog') ) : ?><!-- no sidebar --><?php endif; ?>
+				<h4>Quick Links</h4>
+				<?php wp_nav_menu( array( 'theme_location' => 'blog-menu', 'menu_class' => 'nav-menu' ) ); ?>
+				<?php print apply_filters( 'the_content', do_shortcode('[snippet slug="blog-sidebar-bottom" /]')) ?>
 			</div>
 		</div><!-- #content -->
 	</div><!-- #content -->
